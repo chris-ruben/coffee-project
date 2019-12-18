@@ -12,11 +12,22 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
+    coffees.sort(function(a, b) {
+        return (a.id - b.id);
+    });
+    coffees.forEach(function (coffee) {
+        html += ("<h2>" + coffee.name + "</h2>" + "<p>" + coffee.roast + "</p>");
+    });
+    document.getElementById("coffeeList").innerHTML = html;
 }
+
+
+
+    // for(var i = coffees.length - 1; i >= 0; i--) {
+    //     html += renderCoffee(coffees[i]);
+    // }
+
+// }
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
