@@ -1,14 +1,14 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
-}
+// function renderCoffee(coffee) {
+//     var html = '<tr class="coffee">';
+//     html += '<td>' + coffee.id + '</td>';
+//     html += '<td>' + coffee.name + '</td>';
+//     html += '<td>' + coffee.roast + '</td>';
+//     html += '</tr>';
+//
+//     return html;
+// }
 
 
 
@@ -29,9 +29,9 @@ function renderCoffees(coffees) {
 
 
 // add coffeeeeee
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+function updateCoffees() {
+    // e.preventDefault(); // don't submit the form, we just want to update the data
+    // var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
@@ -63,15 +63,6 @@ function sortCoffees(input) {
     let substring = document.getElementById("coffeeNameInput");
     let filteredData = coffees.filter(coffee => coffee.name.toLowerCase().includes(substring.toLowerCase()));
     console.log(filteredData);
-    var html = '';
-    coffees.sort(function(a, b) {
-        return (a.id - b.id);
-    });
-    coffees.forEach(function (coffee) {
-        html += ("<a><h2>" + coffee.name + "</h2>" + "<p>" + coffee.roast + "</p></a>");
-    });
-    document.getElementById("coffeeList").innerHTML = html;
-    tbody.innerHTML = sortCoffees(input);
 }
 
 
@@ -80,7 +71,16 @@ function sortCoffees(input) {
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+
+var selectedRoast = 'All';
+var roastSelection = document.querySelector('#inputGroupsSelect01');
+roastSelection.addEventListener("change", function() {
+    selectedRoast = roastSelection.value;
+    console.log(selectedRoast);
+    updateCoffees();
+});
+
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
