@@ -20,7 +20,7 @@
             <h6 class="card-title">Roast</h6>
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="all">
-                <div class="input-group-append">
+<!--                <div class="input-group-append">-->
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">All</a>
@@ -28,7 +28,7 @@
                         <a class="dropdown-item" href="#">Medium</a>
                         <a class="dropdown-item" href="#">Dark</a>
                     </div>
-                </div>
+<!--                </div>-->
             </div>
             <h6 class="card-title">Coffee Name
             </h6>
@@ -44,15 +44,15 @@
         <div class="card-body">
             <h6 class="card-title">Roast</h6>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="all">
+                <input id= "inputbox" type="text" onkeyup = "nameFlter()" class="form-control" placeholder="all">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">All</a>
+                    <select class="dropdown-menu">
+                        <a class="dropdown-item active" href="#">All</a>
                         <a class="dropdown-item" href="#">Light</a>
                         <a class="dropdown-item" href="#">Medium</a>
                         <a class="dropdown-item" href="#">Dark</a>
-                    </div>
+                    </select>
                 </div>
             </div>
             <h6 class="card-title">Name</h6>

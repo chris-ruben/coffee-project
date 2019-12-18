@@ -16,12 +16,23 @@ function renderCoffees(coffees) {
         return (a.id - b.id);
     });
     coffees.forEach(function (coffee) {
-        html += ("<h2>" + coffee.name + "</h2>" + "<p>" + coffee.roast + "</p>");
+        html += ("<a><h2>" + coffee.name + "</h2>" + "<p>" + coffee.roast + "</p></a>");
     });
     document.getElementById("coffeeList").innerHTML = html;
 }
 
-
+function nameFilter(){
+    var input = document.getElementById("inputbox");
+    for (var i =0; i<coffees.length; i++){
+        a = coffees[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            coffees[i].style.display = "";
+        } else {
+            coffees[i].style.display = "none";
+        }
+    }
+}
 
     // for(var i = coffees.length - 1; i >= 0; i--) {
     //     html += renderCoffee(coffees[i]);
