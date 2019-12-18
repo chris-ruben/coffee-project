@@ -10,6 +10,9 @@ function renderCoffee(coffee) {
     return html;
 }
 
+
+
+// Displays and sorts coffees from cofffe array
 function renderCoffees(coffees) {
     var html = '';
     coffees.sort(function(a, b) {
@@ -21,25 +24,11 @@ function renderCoffees(coffees) {
     document.getElementById("coffeeList").innerHTML = html;
 }
 
-function nameFilter(){
-    var input = document.getElementById("inputbox");
-    for (var i =0; i<coffees.length; i++){
-        a = coffees[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            coffees[i].style.display = "";
-        } else {
-            coffees[i].style.display = "none";
-        }
-    }
-}
 
-    // for(var i = coffees.length - 1; i >= 0; i--) {
-    //     html += renderCoffee(coffees[i]);
-    // }
 
-// }
 
+
+// add coffeeeeee
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -69,6 +58,25 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+// sort for textinput
+function sortCoffees(input) {
+    let substring = document.getElementById("coffeeNameInput");
+    let filteredData = coffees.filter(coffee => coffee.name.toLowerCase().includes(substring.toLowerCase()));
+    console.log(filteredData);
+    var html = '';
+    coffees.sort(function(a, b) {
+        return (a.id - b.id);
+    });
+    coffees.forEach(function (coffee) {
+        html += ("<a><h2>" + coffee.name + "</h2>" + "<p>" + coffee.roast + "</p></a>");
+    });
+    document.getElementById("coffeeList").innerHTML = html;
+    tbody.innerHTML = sortCoffees(input);
+}
+
+
+
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');

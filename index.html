@@ -14,28 +14,24 @@
 </row>
 <hr>
 <!--start of body-->
-<row class="col-12 d-flex justify-content-center align-items-center">
+<row class="col-12 d-flex justify-content-center">
     <div class="card col-6 d-flex">
         <div class="card-body">
             <h6 class="card-title">Roast</h6>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="all">
-<!--                <div class="input-group-append">-->
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">All</a>
-                        <a class="dropdown-item" href="#">Light</a>
-                        <a class="dropdown-item" href="#">Medium</a>
-                        <a class="dropdown-item" href="#">Dark</a>
-                    </div>
-<!--                </div>-->
+            <div class="input-group mb-3">
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>All</option>
+                    <option value="1">Light</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Dark</option>
+                </select>
             </div>
             <h6 class="card-title">Coffee Name
             </h6>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 </div>
-                <input class="form-control form-control-sm" type="text">
+                <input id="coffeeNameInput" class="form-control form-control-sm" type="text">
             </div>
             <a href="#" class="btn btn-primary">Submit</a>
         </div>
@@ -43,17 +39,13 @@
         <h2>Add a Coffee</h2>
         <div class="card-body">
             <h6 class="card-title">Roast</h6>
-            <div class="input-group">
-                <input id= "inputbox" type="text" onkeyup = "nameFlter()" class="form-control" placeholder="all">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <select class="dropdown-menu">
-                        <a class="dropdown-item active" href="#">All</a>
-                        <a class="dropdown-item" href="#">Light</a>
-                        <a class="dropdown-item" href="#">Medium</a>
-                        <a class="dropdown-item" href="#">Dark</a>
-                    </select>
-                </div>
+            <div class="input-group mb-3">
+                <select class="custom-select" id="inputGroupSelect02">
+                    <option selected>All</option>
+                    <option value="1">Light</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Dark</option>
+                </select>
             </div>
             <h6 class="card-title">Name</h6>
             <div class="input-group mb-3">
