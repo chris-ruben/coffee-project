@@ -1,4 +1,7 @@
-
+.imageDude {
+    height: 50px;
+    width: 50px;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;

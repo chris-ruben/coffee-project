@@ -18,7 +18,7 @@
 //     {id: 14, name: 'French', roast: 'dark'},
 // ];
 var coffees = [
-    {id: 1, name: 'Tent City', roast: 'light'},
+    {id: 1, name: 'Tent City', roast: 'light', image:'img/dirtyjoe.jpg'},
     {id: 2, name: 'Carboard House', roast: 'light'},
     {id: 3, name: 'Pigeon Drop', roast: 'light'},
     {id: 4, name: "Where's My Wife?", roast: 'medium'},
@@ -52,7 +52,11 @@ function renderCoffees(coffees) {
         return (a.id - b.id);
     });
     coffees.forEach(function (coffee) {
-        html += "<a class='col-6 '><h2>" + coffee.name + "</h2>" + "<p>" + coffee.roast + "</p><img ></a>";
+        html += "<div class='col-6'>";
+        html += "<h2>" + coffee.name + "</h2>";
+        html += "<p>" + coffee.roast + "</p>";
+        html += '<img src="'+ coffee.image + '" alt="" class="imageDude">';
+        html += "</div>";
     });
     return html;
 }
