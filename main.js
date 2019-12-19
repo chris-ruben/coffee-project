@@ -11,7 +11,6 @@
 // }
 
 
-
 // Displays and sorts coffees from cofffe array
 function renderCoffees(coffees) {
     var html = '';
@@ -57,11 +56,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 // sort for textinput
-function sortCoffees(input) {
-    let substring = document.getElementById("coffeeNameInput");
-    let filteredData = coffees.filter(coffee => coffee.name.toLowerCase().includes(substring.toLowerCase()));
-    console.log(filteredData);
-}
+// function sortCoffees(input) {
+//     let substring = document.getElementById("coffeeNameInput");
+//     let filteredData = coffees.filter(coffee => coffee.name.toLowerCase().includes(substring.toLowerCase()));
+//     console.log(filteredData);
+// }
 
 
 

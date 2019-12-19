@@ -18,8 +18,10 @@
     <div class="card col-6 d-flex">
         <div class="card-body">
 <!--            beginning to the roast selection-->
+<!--            Header to select coffee you want -->
             <h6 class="card-title">Roast</h6>
             <div class="input-group mb-3">
+<!--                drop down to select roast you want -->
                 <select class="custom-select" id="inputGroupsSelect01">
                     <option selected value="all">All</option>
                     <option value="light">Light</option>
@@ -27,18 +29,22 @@
                     <option value="dark">Dark</option>
                 </select>
             </div>
-            <h6 class="card-title">Coffee Name
-            </h6>
+            <h6 class="card-title">Coffee Name</h6>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                </div>
+                <div class="input-group-prepend"></div>
+<!--                Section to type in your coffee name selection-->
                 <input id="coffeeNameInput" class="form-control form-control-sm" type="text">
             </div>
             <a href="#" class="btn btn-primary">Submit</a>
         </div>
         <hr>
+
+
+<!--        section to add a coffee                 -->
+<!--        header for add a coffee                 -->
         <h2>Add a Coffee</h2>
         <div class="card-body">
+<!--    Roast selection                             -->
             <h6 class="card-title">Roast</h6>
             <div class="input-group mb-3">
                 <select class="custom-select" id="inputGroupSelect02">
@@ -48,15 +54,28 @@
                     <option id="3">Dark</option>
                 </select>
             </div>
+<!--            input of coffee name to add         -->
             <h6 class="card-title">Name</h6>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 </div>
-                <input class="form-control form-control-sm" type="text">
+<!-- Box to type in coffe name your adding -->
+                <input id="coffee" class="form-control form-control-sm" type="text">
             </div>
-            <a href="#" class="btn btn-primary">Submit</a>
+<!--            button to add coffee you created -->
+            <a href="#"  id="button" class="btn btn-primary">Submit</a>
         </div>
     </div>
+
+<form class="col-6 d-flex justify-content-center align-items-center">
+
+<!--    coffee list with all the coffees            -->
+<ul id="coffeeList"></ul>
+
+
+</form>
+</row>
+
 <!--    <label for="roast-selection"></label>-->
 <!--    <select id="roast-selection">-->
 <!--        <option>light</option>-->
@@ -64,11 +83,10 @@
 <!--        <option>dark</option>-->
 <!--    </select>-->
 <!--    <input id="submit" type="submit"/>-->
-<form class="col-6 d-flex justify-content-center align-items-center">
-<!--    <h2>placeholder for coffees</h2>-->
-<ul id="coffeeList"></ul>
 
-    <!--    <thead>-->
+<!--    <h2>placeholder for coffees</h2>-->
+
+<!--    <thead>-->
 <!--    <tr>-->
 <!--        <th>ID</th>-->
 <!--        <th>NAME</th>-->
@@ -76,8 +94,7 @@
 <!--    </tr>-->
 <!--    </thead>-->
 <!--    <tbody id="coffees"></tbody>-->
-</form>
-</row>
+
 <!--    Bootstrap JS-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
