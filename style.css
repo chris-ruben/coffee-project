@@ -1,14 +1,17 @@
 
 body{
-    background-color: sienna;
+    background-image: url("img/beans-coffee-drink-cafe-34085.jpg");
     font-family: 'Dancing Script', cursive;;
+
 }
 
 
 form{
     border-collapse: collapse;
     background-color: blanchedalmond;
+    opacity: 0.5;
 }
 .card{
     background-color: bisque;
+    opacity: 0.7;
 }
