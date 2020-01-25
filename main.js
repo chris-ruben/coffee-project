@@ -49,13 +49,13 @@ var coffees = [
 function renderCoffees(coffees) {
     var html = '';
     coffees.sort(function (a, b) {
-        return (a.id - b.id);
+        return (a.name - b.name);
     });
     coffees.forEach(function (coffee) {
         html += "<div class='col-6'>";
         html += "<h2>" + coffee.name + "</h2>";
         html += "<p>" + coffee.roast + "</p>";
-        html += '<img src="'+ coffee.image + '" alt="" class="imageDude">';
+        // html += '<img src="' + coffee.image + '" alt="" class="imageDude">';
         html += "</div>";
     });
     return html;
@@ -75,8 +75,7 @@ function updateCoffees() {
     coffeeList.innerHTML = renderCoffees(filteredCoffees);
 };
 
-// create coffeee
-
+// create coffee
 function createCoffee(inputName, roastType) {
     var newCoffee = {id: coffees.length + 1, name: inputName, roast: roastType}
     coffees.push(newCoffee);
