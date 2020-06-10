@@ -9,9 +9,9 @@ body{
 form{
     border-collapse: collapse;
     background-color: blanchedalmond;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 .card{
     background-color: bisque;
-    opacity: 0.7;
+    opacity: 0.9;
 }
